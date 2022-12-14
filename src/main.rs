@@ -47,7 +47,7 @@ fn main() {
 			io::stdin()
 				.read_line(&mut celcius)
 				.expect("Failed to read input");
-			let celcius: i32 = celcius.trim().parse() {
+			let celcius: i32 = match celcius.trim().parse() {
 				Ok(num) => num,
 				Err(_) => {
 					println!("Please type a number!");
